@@ -1,0 +1,183 @@
+.gf-rubik {
+    font-family: 'Rubik', sans-serif;
+}
+
+.gf-eczar {
+    font-family: 'Eczar', serif;
+}
+
+#outer {
+    min-height: 100vh;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    padding: 15px;
+    font-family: 'Rubik', sans-serif;
+}
+
+#outer-container {
+    width: 100%;
+    max-width: 790px;
+}
+
+#form-container {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+label {
+    box-sizing: border-box;
+    color: #fff;
+    display: block;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    white-space: normal;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 59px;
+}
+
+#input-container {
+    width: 100%;
+    margin-bottom: 17px;
+}
+
+#input-container-inner {
+    height: 70px;
+    width: 100%;
+    position: relative;
+}
+
+input {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+button, 
+input, 
+select, 
+textarea {
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
+button, 
+input {
+    overflow: visible;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+#gif-input {
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    border: 0;
+    background: rgba(255,255,255,0.9);
+    display: flex;
+    width: 100%;
+    padding: 10px 70px 10px 32px;
+    font-size: 18px;
+    color: #999;
+    border-radius: 34px;
+    box-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+
+    /* Alignment fix */
+    position: absolute;
+    left: 0;
+}
+
+#gif-input:active, 
+#gif-input:focus {
+    background: rgba(255,255,255,1);
+    color: #444;
+}
+
+#add-topic {
+    width: 70px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    display: block;
+    -ms-flex-pack: center;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+}
+
+#add-topic:hover, 
+#add-topic:active, 
+#add-topic:focus {
+    color: #1524D9;
+}
+
+#buttons, 
+#images {
+    padding: 0 15px;
+}
+
+#images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Fixes spacing on last row */
+#images::after {
+    content: "";
+    flex: auto;
+  }
+
+.gif-container {
+    margin: 10px;
+}
+
+.get-giphy {
+    font-size: 14px;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0 15px;
+    line-height: 32px;
+    color: #fff;
+    border: none;
+    border-radius: 16px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.get-giphy:hover, 
+.get-giphy:active, 
+.get-giphy:focus {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.gif-image {
+    max-height: 150px;
+}

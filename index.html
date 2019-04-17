@@ -24,6 +24,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
     <title>GifTastic</title>
 
     <!-- Favicon -->
@@ -31,16 +34,26 @@
 </head>
 
 <body>
-    <form id="gif-form">
-        <label for="gif-input">What's your favorite cartoon?</label>
-        <input type="text" id="gif-input"><br>
+    <div id="outer">
+        <div id="outer-container">
+            <form id="gif-form">
+                <div id="form-container">
+                    <!-- Removed "for" attribute to avoid pseudo-class styles from being invoked -->
+                    <label>What's your favorite cartoon?</label>
 
-        <!-- Button triggers new movie to be added -->
-        <input id="add-topic" type="submit" value="GifTastic Search">
-    </form>
-    <div id="buttons"></div>
+                    <div id="input-container">
+                        <div id="input-container-inner">
+                            <input type="text" id="gif-input">
+                            <input id="add-topic" class="fas fa-search" type="submit" value="&#xf002">
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div id="buttons"></div>
+        </div>
+    </div>
+    
     <div id="images"></div>
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"

@@ -75,13 +75,17 @@ $(document).ready(function () {
 
     // Parses response and creates HTML elements
     function parseGiphy(object, search) {
+        var div = $("<div>");
         var img = $("<img>");
         var p = $("<p>");
         var still = object.images.fixed_height_still.url;
         var animate = object.images.fixed_height.url;
         var rating = object.rating;
 
+        div.addClass("gif-container")
+
         img.attr("src", still)
+            .addClass("gif-image")
             .attr("alt", search)
             .attr("data-state", "still")
             .attr("data-still", still)
@@ -89,8 +93,10 @@ $(document).ready(function () {
 
         p.text("Rating: " + rating);
 
-        $("#images").prepend(p);
-        $("#images").prepend(img);
+        div.append(img)
+            .append(p);
+
+        $("#images").prepend(div);
     }
 
     // Updates the state of the gif from still to animate and back to still
@@ -117,14 +123,19 @@ $(document).ready(function () {
      * Events
      */
 
-    $("#add-topic").on("click", function(event) {
+    $("#add-topic").on("click", function (event) {
         event.preventDefault();
 
-        var newTopic = $("#gif-input").val();
+        var newTopic = $("#gif-input").val().trim();
 
-        app.topics.push(newTopic); // Not sure if this is necessary, topics array serves no added purpose other than populating initial buttons
+        // Only push and create button if input has a value
+        if (newTopic !== "") {
+            app.topics.push(newTopic); // Not sure if this is necessary, topics array serves no added purpose other than populating initial buttons
+            createButtons(newTopic);
 
-        createButtons(newTopic);
+            // Clear previous search from input field
+            $("#gif-input").val("");
+        }
     });
 
     $(document).on("click", ".get-giphy", getGiphy);
