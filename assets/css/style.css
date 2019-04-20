@@ -194,3 +194,33 @@ button:focus {
 .gif-image:hover {
     box-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
+
+@media (max-width: 768px) {
+
+    #input-container-inner {
+        height: 50px;
+        transition: height 0.5s ease;
+    }
+
+    label {
+        margin-bottom: 10px;
+        transition: margin-bottom 0.5s ease;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    #input-container-inner {
+        height: 50px;
+        transition: height 0.5s ease;
+    }
+
+    label {
+        font-size: 24px;
+        transition: margin-bottom 0.5s ease;
+        margin-bottom: 10px;
+        transition: margin-bottom 0.5s ease;
+    }
+
+}
