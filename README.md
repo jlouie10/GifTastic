@@ -14,6 +14,7 @@ A dynamic web page that populates with gifs of my choice. This application demon
 * Clicking a gif will toggle its still/animated versions
 * New button created when a topic is searched
 * New search layout
+* Transition effect when loading gifs for the first time
 
 # Instructions
 
