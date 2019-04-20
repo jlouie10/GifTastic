@@ -100,6 +100,7 @@ button:focus {
     color: #999;
     border-radius: 34px;
     box-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+    transition: background 0.5s ease;
 
     /* Alignment fix */
     position: absolute;
@@ -130,6 +131,7 @@ button:focus {
     justify-content: center;
     align-items: center;
     color: #999;
+    transition: color 0.5s ease;
 }
 
 #add-topic:hover, 
@@ -146,17 +148,20 @@ button:focus {
 #images {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    width: 95%;
+    margin: 0 auto;
+    align-items: center;
 }
 
 /* Fixes spacing on last row */
-#images::after {
+/* #images::after {
     content: "";
     flex: auto;
-  }
+  } */
 
 .gif-container {
-    margin: 10px;
+    margin: 5px;
 }
 
 .get-giphy {
@@ -170,6 +175,7 @@ button:focus {
     border-radius: 16px;
     margin-right: 10px;
     margin-bottom: 10px;
+    transition: background 0.5s ease;
 }
 
 .get-giphy:hover, 
@@ -179,5 +185,12 @@ button:focus {
 }
 
 .gif-image {
-    max-height: 150px;
+    max-height: 175px;
+    width: auto;
+    height: auto;
+    transition: box-shadow 0.5s ease;
+}
+
+.gif-image:hover {
+    box-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }

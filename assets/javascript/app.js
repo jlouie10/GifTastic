@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     /**
-     * Declare Variables
+     * Declarations
      */
 
     var app = {
@@ -12,7 +12,7 @@ $(document).ready(function () {
 
 
     /**
-     * Run Application
+     * Application
      */
 
     getButtons();
@@ -46,6 +46,8 @@ $(document).ready(function () {
     function getGiphy() {
         var searchString = $(this).attr("data-value");
         var queryUrl = getQueryUrl(searchString);
+
+        updateSearchBar();
 
         // GET request
         $.get(queryUrl)
@@ -82,7 +84,7 @@ $(document).ready(function () {
         var animate = object.images.fixed_height.url;
         var rating = object.rating;
 
-        div.addClass("gif-container")
+        div.addClass("gif-container");
 
         img.attr("src", still)
             .addClass("gif-image")
@@ -116,6 +118,18 @@ $(document).ready(function () {
         else {
             console.log("Error");
         }
+    }
+
+    // Updates CSS in the search area to make room for gifs to populate
+    function updateSearchBar() {
+        $("#outer").css("min-height", "50vh")
+            .css("transition", "min-height 0.5s ease");
+
+        $("#input-container-inner").css("height", "50px")
+            .css("transition", "height 0.5s ease");
+
+        $("label").css("margin-bottom", "10px")
+            .css("transition", "margin-bottom 0.5s ease");
     }
 
 
