@@ -74,7 +74,7 @@ $(document).ready(function () {
     // Concatenantes URL to pass additional parameters
     function getQueryUrl(search, offset) {
         var apiKey = "nww7lWBSlBLoaPULkE2UKk8RQP8xyQgm";
-        var endpoint = "http://api.giphy.com/v1/gifs/search";
+        var endpoint = "https://api.giphy.com/v1/gifs/search";
         var limit = 10;
 
         var url = endpoint +
@@ -101,7 +101,7 @@ $(document).ready(function () {
         var rating = object.rating;
 
         var h = $("<h6>");
-        var title = object.title;
+        var title = object.title;;
 
         rating = rating.toUpperCase();
 
