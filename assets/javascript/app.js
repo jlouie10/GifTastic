@@ -99,6 +99,8 @@ $(document).ready(function () {
         var animate = object.images.fixed_height.url;
         var rating = object.rating;
 
+        rating = rating.toUpperCase();
+
         div.addClass("gif-container");
 
         img.attr("src", still)
