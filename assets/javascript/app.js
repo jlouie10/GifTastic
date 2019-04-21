@@ -7,8 +7,9 @@ $(document).ready(function () {
     var app = {
         name: "GifTastic",
         theme: "cartoons",
-        topics: ["Simpsons", "Thundercats", "Tom and Jerry", "South Park", "Spongebob"]
-    }
+        //topics: ["Simpsons", "Flinstones", "Family Guy", "South Park", "Looney Toons", "Spongebob", "Ninja Turtles", "Futurama", "Powerpuff Girls", "Animaniacs", "Tom & Jerry", "Pinky and the Brain", "Pokemon", "Rugrats", "Jetsons", "Scooby-Doo", "DuckTales", "Inspector Gadget", "Thundercats", "He Man"]
+        topics: ["Simpsons", "Flinstones", "Family Guy", "South Park", "Looney Toons", "Spongebob", "Ninja Turtles", "Futurama", "Powerpuff Girls", "Animaniacs"]
+    } // Used second topics property to limit initial buttons to 10 to keep page clean
 
 
     /**
@@ -62,7 +63,6 @@ $(document).ready(function () {
         $.get(queryUrl)
             .then(function (response) {
                 var results = response.data;
-                console.log(results)
                 var i;
 
                 for (i = 0; i < results.length; i++) {

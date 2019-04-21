@@ -7,12 +7,19 @@
 }
 
 h6 {
+    max-width: 175px;
     font-size: 0.85rem;
+    font-weight: 400;
     margin-bottom: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+
 
 p {
     font-size: 0.75rem;
+    color: #999;
 }
 
 #outer {
