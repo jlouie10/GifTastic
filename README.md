@@ -16,10 +16,14 @@ A dynamic web page that populates with gifs of my choice. This application demon
 * New search layout
 * Transition effect when loading gifs for the first time
 * More mobile responsive
+* Added title to each gif
 
 # Instructions
 
 # Issues ([Feature], [Bug])
+[Feature] Add limit when gifs loaded is greater than total gifs on Giphy
+[Bug] All titles appear to be lowercase
+[Bug] Long titles push gif container wider than image
 
 # References
 * Page template inspiration

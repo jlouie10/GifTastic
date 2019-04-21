@@ -62,6 +62,7 @@ $(document).ready(function () {
         $.get(queryUrl)
             .then(function (response) {
                 var results = response.data;
+                console.log(results)
                 var i;
 
                 for (i = 0; i < results.length; i++) {
@@ -99,6 +100,9 @@ $(document).ready(function () {
         var animate = object.images.fixed_height.url;
         var rating = object.rating;
 
+        var h = $("<h6>");
+        var title = object.title;
+
         rating = rating.toUpperCase();
 
         div.addClass("gif-container");
@@ -110,9 +114,11 @@ $(document).ready(function () {
             .attr("data-still", still)
             .attr("data-animate", animate);
 
-        p.text("Rating: " + rating);
+        h.text(title);
+        p.text("Rated: " + rating);
 
         div.append(img)
+            .append(h)
             .append(p);
 
         $("#images").prepend(div);

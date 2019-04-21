@@ -6,6 +6,15 @@
     font-family: 'Eczar', serif;
 }
 
+h6 {
+    font-size: 0.85rem;
+    margin-bottom: 0;
+}
+
+p {
+    font-size: 0.75rem;
+}
+
 #outer {
     min-height: 100vh;
     display: -ms-flexbox;
@@ -148,7 +157,7 @@ button:focus {
 #images {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     width: 95%;
     margin: 0 auto;
     align-items: center;
@@ -196,7 +205,6 @@ button:focus {
 }
 
 @media (max-width: 768px) {
-
     #input-container-inner {
         height: 50px;
         transition: height 0.5s ease;
@@ -206,11 +214,9 @@ button:focus {
         margin-bottom: 10px;
         transition: margin-bottom 0.5s ease;
     }
-
 }
 
 @media (max-width: 576px) {
-
     #input-container-inner {
         height: 50px;
         transition: height 0.5s ease;
@@ -222,5 +228,4 @@ button:focus {
         margin-bottom: 10px;
         transition: margin-bottom 0.5s ease;
     }
-
 }
