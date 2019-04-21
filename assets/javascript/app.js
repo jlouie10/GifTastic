@@ -37,7 +37,8 @@ $(document).ready(function () {
 
         button.text(buttonText)
             .addClass("get-giphy")
-            .attr("data-value", buttonText);
+            .attr("data-value", buttonText)
+            .attr("data-clicks", "0");
 
         $("#buttons").append(button);
     }
@@ -45,7 +46,15 @@ $(document).ready(function () {
     // Makes request to Giphy API
     function getGiphy() {
         var searchString = $(this).attr("data-value");
-        var queryUrl = getQueryUrl(searchString);
+        var clickString = $(this).attr("data-clicks");
+        var clickNumber = parseInt(clickString);
+        var queryUrl = getQueryUrl(searchString, clickNumber);
+
+        // This click tracker uses Giphy API's pagination to retrieve a unique set of gifs to display to the user
+        clickNumber++;
+        clickString = clickNumber.toString();
+
+        $(this).attr("data-clicks", clickString);
 
         updateSearchBar();
 
@@ -62,7 +71,7 @@ $(document).ready(function () {
     }
 
     // Concatenantes URL to pass additional parameters
-    function getQueryUrl(search) {
+    function getQueryUrl(search, offset) {
         var apiKey = "nww7lWBSlBLoaPULkE2UKk8RQP8xyQgm";
         var endpoint = "http://api.giphy.com/v1/gifs/search";
         var limit = 10;
@@ -71,6 +80,12 @@ $(document).ready(function () {
             "?api_key=" + apiKey +
             "&q=" + search +
             "&limit=" + limit;
+
+        // If get-giphy button clicked more than once, pass offset to Giphy
+        if (offset !== 0) {
+            offset = offset * limit;
+            url = url + "&offset=" + offset;
+        }
 
         return url;
     }
