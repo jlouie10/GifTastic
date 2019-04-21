@@ -16,7 +16,6 @@ A dynamic web page that populates with gifs of my choice. This application demon
 * New search layout
 * Transition effect when loading gifs for the first time
 * More mobile responsive
-* Retrieve unique gifs each time user clicks a get-giphy button
 
 # Instructions
 
